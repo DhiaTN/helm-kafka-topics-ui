@@ -3,9 +3,14 @@ This helm chart creates a [Kafka-Topics-UI server](https://github.com/Landoop/ka
 
 This is a web tool for the confluentinc/kafka-rest proxy in order to browse Kafka topics and understand what's happening on your cluster. Find topics / view topic metadata / browse topic data (kafka messages) / view topic configuration / download data.
 
+## Usage:
+
+```console
+helm repo add kafka-topics-ui https://dhiatn.github.io/helm-kafka-topics-ui
+```
 
 ## Prerequisites
-* Kubernetes 1.8
+* Kubernetes
 * A running Kafka Installation
 * A running Zookeeper Installation
 * A running Kafka REST Proxy installation
@@ -51,7 +56,7 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml kafka-topics-ui
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default [values.yaml](kafka-topics-ui/values.yaml)
 
 ### Parameters
 The following table lists the configurable parameters of the KafkaTopicsUI chart and their default values.
