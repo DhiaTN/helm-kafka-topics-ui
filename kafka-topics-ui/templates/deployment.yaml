@@ -24,7 +24,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-          - name: KAFKA_REST_URL
+          - name: KAFKA_REST_PROXY_URL
             value: "{{ .Values.kafkaRest.url }}:{{ .Values.kafkaRest.port }}"
           - name: PROXY
             value: "{{ .Values.kafkaRest.proxy }}"
