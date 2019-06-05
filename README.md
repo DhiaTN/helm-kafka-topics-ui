@@ -26,7 +26,7 @@ This chart will do the following:
 You can install the chart with the release name `ktopics-ui` as below.
 
 ```console
-$ helm install --name ktopics-ui kafka-topics-ui
+$ helm install -f <your-values.yaml> --namespace <your-namespace> --name kafka-topics-ui kafka-topics-ui/kafka-topics-ui
 ```
 
 If you do not specify a name, helm will select a name for you.
@@ -34,18 +34,18 @@ If you do not specify a name, helm will select a name for you.
 ```console{%raw}
 $ kubectl get all -l app=kafka-topics-ui
 NAME                          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-deploy/ktopics-ui-kafka-topics-ui   1         1         1            1           23m
+deploy/kafka-topics-ui   1         1         1            1           23m
 
 NAME                                DESIRED   CURRENT   READY     AGE
-rs/ktopics-ui-kafka-topics-ui-bcb4c994c   1         1         1         23m
+rs/kafka-topics-ui-bcb4c994c   1         1         1         23m
 
 NAME                                      READY     STATUS    RESTARTS   AGE
-po/ktopics-ui-kafka-topics-ui-bcb4c994c-qjqbj   1/1       Running   1          23m
+po/kafka-topics-ui-bcb4c994c-qjqbj   1/1       Running   1          23m
 ```
 
-1. `deploy/ktopics-ui-kafka-topics-ui` is the Deployment created by this chart.
-1. `rs/ktopics-ui-kafka-topics-ui-bcb4c994c` is the ReplicaSet created by this Chart's Deployment.
-1. `po/ktopics-ui-kafka-topics-ui-bcb4c994c-qjqbj` is the Pod created by the ReplicaSet under this Chart's Deployment.
+1. `deploy/kafka-topics-ui` is the Deployment created by this chart.
+1. `rs/kafka-topics-ui-bcb4c994c` is the ReplicaSet created by this Chart's Deployment.
+1. `po/kafka-topics-ui-bcb4c994c-qjqbj` is the Pod created by the ReplicaSet under this Chart's Deployment.
 
 ## Configuration
 You can specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
