@@ -8,7 +8,7 @@ keywords:
   - confluent
   - kafka-topics-ui
   - Kafka
-version: 0.2.0
+version: 0.3.0
 maintainers:
 - email: dhia.absi@gmail.com
   name: dhiatn
